@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+ //principal
 package estructural;
 
 import java.util.ArrayList;
