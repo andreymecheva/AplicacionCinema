@@ -132,6 +132,7 @@ public class Cinema extends javax.swing.JFrame {
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
+        //Abrimos la ventana
         tarjeta.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
