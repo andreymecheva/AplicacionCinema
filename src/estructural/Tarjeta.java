@@ -5,6 +5,8 @@
  */
 package estructural;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author W7
@@ -13,6 +15,7 @@ public class Tarjeta {
     private int cedula;
     private String nombre;
     private double saldo;
+    private ArrayList <Tarjeta> tarjetas;
 
     public Tarjeta(int cedula, String nombre, double saldo) {
         this.cedula = cedula;
@@ -30,6 +33,10 @@ public class Tarjeta {
 
     public double getSaldo() {
         return saldo;
+    }
+    
+    public ArrayList <Tarjeta> getTarjetas(){
+        return tarjetas;
     }
 
     public void setCedula(int cedula) {

@@ -4,18 +4,22 @@
  * and open the template in the editor.
  */
 package View;
+import estructural.*;
 
 /**
  *
  * @author rmesa
  */
-public class Tarjeta extends javax.swing.JFrame {
-
+public class JTarjeta extends javax.swing.JFrame {
+    
+    private Tarjeta tarjeta;
     /**
      * Creates new form Tarjeta
      */
-    public Tarjeta() {
+    public JTarjeta() {
         initComponents();
+        
+        
     }
 
     /**
@@ -27,8 +31,8 @@ public class Tarjeta extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        tcedula = new javax.swing.JTextField();
+        tnombre = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -74,8 +78,8 @@ public class Tarjeta extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(tnombre)
+                            .addComponent(tcedula, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(143, 143, 143))
             .addGroup(layout.createSequentialGroup()
                 .addGap(115, 115, 115)
@@ -90,11 +94,11 @@ public class Tarjeta extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tcedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -108,6 +112,14 @@ public class Tarjeta extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        int cedula = Integer.parseInt(tcedula.getText());
+        tarjeta = new Tarjeta(cedula, tnombre.getText(), 70000);
+        tarjeta.getCedula();
+        tarjeta.getNombre();
+        tarjeta.getSaldo();
+        System.out.println(tarjeta.getCedula() + " " + tarjeta.getNombre() + " " + tarjeta.getSaldo());
+        System.out.println(tarjeta.getTarjetas());
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -126,7 +138,7 @@ public class Tarjeta extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField tcedula;
+    private javax.swing.JTextField tnombre;
     // End of variables declaration//GEN-END:variables
 }

@@ -15,7 +15,7 @@ public class Cinema extends javax.swing.JFrame {
     private Funcion funcion;
     private Recarga recarga;
     private Reserva reserva;
-    private Tarjeta tarjeta;
+    private JTarjeta tarjeta;
     private Ubicacion ubicacion;
 
     /**
@@ -27,7 +27,7 @@ public class Cinema extends javax.swing.JFrame {
         funcion = new Funcion();
         recarga = new Recarga();
         reserva = new Reserva();
-        tarjeta = new Tarjeta();
+        tarjeta = new JTarjeta();
         ubicacion = new Ubicacion();
     }
 
