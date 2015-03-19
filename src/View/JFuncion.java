@@ -11,12 +11,12 @@ import java.util.ArrayList;
  *
  * @author rmesa
  */
-public class Funcion extends javax.swing.JFrame {
+public class JFuncion extends javax.swing.JFrame {
 
     /**
      * Creates new form Funcion
      */
-    public Funcion() {
+    public JFuncion() {
         initComponents();
     }
 

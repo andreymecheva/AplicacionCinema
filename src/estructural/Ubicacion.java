@@ -11,16 +11,16 @@ package estructural;
  */
 public class Ubicacion {
     
-    private int idUbicacion;
+    private String idUbicacion;
     private int tipo;
     private Reserva reserva;
 
-    public Ubicacion(int idUbicacion, int tipo) {
+    public Ubicacion(String idUbicacion, int tipo) {
         this.idUbicacion = idUbicacion;
         this.tipo = tipo;
     }
 
-    public int getIdUbicacion() {
+    public String getIdUbicacion() {
         return idUbicacion;
     }
 

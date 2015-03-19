@@ -15,13 +15,17 @@ public class Tarjeta {
     private int cedula;
     private String nombre;
     private double saldo;
-    private ArrayList <Tarjeta> tarjetas;
+    
 
     public Tarjeta(int cedula, String nombre, double saldo) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.saldo = saldo;
+        
+        
     }
+    
+    
 
     public int getCedula() {
         return cedula;
@@ -35,9 +39,8 @@ public class Tarjeta {
         return saldo;
     }
     
-    public ArrayList <Tarjeta> getTarjetas(){
-        return tarjetas;
-    }
+    
+   
 
     public void setCedula(int cedula) {
         this.cedula = cedula;

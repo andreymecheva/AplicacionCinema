@@ -5,6 +5,7 @@
  */
 package View;
 import estructural.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -12,12 +13,14 @@ import estructural.*;
  */
 public class JTarjeta extends javax.swing.JFrame {
     
-    private Tarjeta tarjeta;
+    private Cinema cinema;
     /**
      * Creates new form Tarjeta
      */
-    public JTarjeta() {
+    public JTarjeta(Cinema c) {
+        cinema =(c); 
         initComponents();
+        
         
         
     }
@@ -112,14 +115,10 @@ public class JTarjeta extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        int cedula = Integer.parseInt(tcedula.getText());
-        tarjeta = new Tarjeta(cedula, tnombre.getText(), 70000);
-        tarjeta.getCedula();
-        tarjeta.getNombre();
-        tarjeta.getSaldo();
-        System.out.println(tarjeta.getCedula() + " " + tarjeta.getNombre() + " " + tarjeta.getSaldo());
-        System.out.println(tarjeta.getTarjetas());
         
+        int cedula = Integer.parseInt(tcedula.getText());
+        String nombre = tnombre.getText();
+        cinema.crearTarjeta(cedula, nombre);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

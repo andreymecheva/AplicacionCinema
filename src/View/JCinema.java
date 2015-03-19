@@ -4,31 +4,33 @@
  * and open the template in the editor.
  */
 package View;
+import estructural.*;
+import javax.swing.JFrame;
 
 /**
  *
  * @author rmesa
  */
-public class Cinema extends javax.swing.JFrame {
+public class JCinema extends javax.swing.JFrame {
     
-    private Boleta boleta;
-    private Funcion funcion;
-    private Recarga recarga;
-    private Reserva reserva;
+    private JBoleta boleta;
+    private JFuncion funcion;
+    private JRecarga recarga;
+    private JReserva reserva;
     private JTarjeta tarjeta;
-    private Ubicacion ubicacion;
+    private Cinema cinema;
 
     /**
      * Creates new form Cinemra
      */
-    public Cinema() {
+    public JCinema() {
         initComponents();
-        boleta = new Boleta();
-        funcion = new Funcion();
-        recarga = new Recarga();
-        reserva = new Reserva();
-        tarjeta = new JTarjeta();
-        ubicacion = new Ubicacion();
+        boleta = new JBoleta();
+        funcion = new JFuncion();
+        
+        reserva = new JReserva();
+        
+        
     }
 
     /**
@@ -117,7 +119,10 @@ public class Cinema extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        recarga.setVisible(true);
+        JRecarga ventanar = new JRecarga(cinema);
+        ventanar.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        ventanar.setSize(400, 400);
+        ventanar.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -133,7 +138,10 @@ public class Cinema extends javax.swing.JFrame {
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
         //Abrimos la ventana
-        tarjeta.setVisible(true);
+        JTarjeta ventanat=new JTarjeta(cinema);
+        ventanat.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        ventanat.setSize(400, 400);
+        ventanat.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
@@ -144,7 +152,10 @@ public class Cinema extends javax.swing.JFrame {
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
         //Ahora Desde NetBeans
-        ubicacion.setVisible(true);
+        JUbicacion ventanau = new JUbicacion(cinema);
+        ventanau.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        ventanau.setSize(400, 400);
+        ventanau.setVisible(true);
         
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
@@ -165,21 +176,23 @@ public class Cinema extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cinema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JCinema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cinema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JCinema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cinema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JCinema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cinema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JCinema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cinema().setVisible(true);
+                new JCinema().setVisible(true);
             }
         });
     }

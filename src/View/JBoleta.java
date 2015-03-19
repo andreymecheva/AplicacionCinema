@@ -9,12 +9,12 @@ package View;
  *
  * @author rmesa
  */
-public class Boleta extends javax.swing.JFrame {
+public class JBoleta extends javax.swing.JFrame {
 
     /**
      * Creates new form Boleta
      */
-    public Boleta() {
+    public JBoleta() {
         initComponents();
     }
 

@@ -9,12 +9,12 @@ package View;
  *
  * @author rmesa
  */
-public class Reserva extends javax.swing.JFrame {
+public class JReserva extends javax.swing.JFrame {
 
     /**
      * Creates new form Reserva
      */
-    public Reserva() {
+    public JReserva() {
         initComponents();
     }
 

@@ -5,16 +5,21 @@
  */
 package View;
 
+import estructural.*;
+
 /**
  *
  * @author rmesa
  */
-public class Recarga extends javax.swing.JFrame {
+public class JRecarga extends javax.swing.JFrame {
 
     /**
      * Creates new form Recarga
      */
-    public Recarga() {
+    
+    private Cinema cinema;
+    public JRecarga(Cinema c) {
+        cinema = (c);
         initComponents();
     }
 
@@ -27,7 +32,7 @@ public class Recarga extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
+        tcedula = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -37,9 +42,9 @@ public class Recarga extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        tcedula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                tcedulaActionPerformed(evt);
             }
         });
 
@@ -84,7 +89,7 @@ public class Recarga extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField2)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(tcedula, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel3))
                 .addGap(156, 156, 156))
         );
@@ -94,7 +99,7 @@ public class Recarga extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tcedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -117,11 +122,14 @@ public class Recarga extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        int cedula = Integer.parseInt(tcedula.getText());
+        cinema.buscarTarjeta(cedula);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void tcedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tcedulaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tcedulaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,7 +142,7 @@ public class Recarga extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField tcedula;
     // End of variables declaration//GEN-END:variables
 }

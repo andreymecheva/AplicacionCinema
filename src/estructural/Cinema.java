@@ -16,18 +16,18 @@ import java.util.Date;
 public class Cinema {
     private double tarifaVip;
     private double tarifaGeneral;
-    private ArrayList <Funcion>funciones;
-    private ArrayList <Ubicacion>ubicaciones;
-    private ArrayList <Tarjeta>tarjetas;
-    private ArrayList <Reserva>reservas;
+    private ArrayList <Funcion> funciones;
+    private ArrayList <Ubicacion> ubicaciones;
+    private ArrayList <Tarjeta> tarjetas;
+    private ArrayList <Reserva> reservas;
 
     public Cinema(double tarifaVip, double tarifaGeneral) {
         this.tarifaVip = tarifaVip;
         this.tarifaGeneral = tarifaGeneral;
-        funciones = new ArrayList<>();
-        ubicaciones = new ArrayList<>();
-        tarjetas = new ArrayList<>();
-        reservas = new ArrayList<>();
+        funciones = new ArrayList <> ();
+        ubicaciones = new ArrayList <> ();
+        tarjetas = new ArrayList <> ();
+        reservas = new ArrayList <> ();
         
     }
 
@@ -110,6 +110,45 @@ public class Cinema {
         reservas.add(res);
     }
     
+    public void crearTarjeta (int cedula, String nombre)
+    {
+        for (int i = 0; i < 2; i++) {
+            Tarjeta tar =new Tarjeta(cedula, nombre, 70000);
+            tarjetas.add(tar);
+        }
+        
+    }
+    
+    
+    
+    public void CrearUbicaciones(int nFilas, int nColumnas)
+    {
+        String [] fila = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", 
+                            "K", "L", "M","N","O","P","Q","R","S","T","U","V","W", "X","Y","Z" };
+        
+        for (int j=0; j<=nFilas;j++)
+        {
+            for (int k=0; k<=nColumnas;k++)
+            {
+                if (j>=8 & j<=10 )
+                {
+                    /*0 es general, 1 es VIP*/
+                    String idUbicacion=(fila[j]+k);
+                    Ubicacion ubic = new Ubicacion(idUbicacion,0);
+                    ubicaciones.add(ubic);
+                } else
+                {
+                    String idUbicacion=(fila[j]+k);
+                    Ubicacion ubic = new Ubicacion(idUbicacion,1);
+                    ubicaciones.add(ubic);
+                    
+                }
+                
+            }
+                
+        }
+
+    }
     
 
     
